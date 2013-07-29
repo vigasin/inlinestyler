@@ -12,7 +12,7 @@ setup(
     url='http://github.com/dlanger/inlinestyler',
     download_url='http://github.com/dlanger/inlinestyler/downloads',
     include_package_data=True,
-    zip_safe=False,
+    zip_safe=True,
     keywords=['html', 'css', 'inline', 'style', 'email'],
     packages=find_packages(),
     classifiers=[

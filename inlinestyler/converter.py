@@ -5,6 +5,7 @@ import codecs
 import urlparse
 import csv
 import cssutils
+import pkg_resources
 
 from lxml import etree
 from cssutils.script import csscombine
@@ -80,7 +81,7 @@ class Conversion:
         compliance=dict()
 
         #load CSV containing css property client support into dict
-        mycsv = csv.DictReader(open(os.path.join(os.path.dirname(__file__), "css_compliance.csv")), delimiter=',')
+        mycsv = csv.DictReader(pkg_resources.resource_stream(__name__, "css_compliance.csv"), delimiter=',')
 
         for row in mycsv:
             #count clients so we can calculate an overall support percentage later
